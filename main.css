@@ -1,0 +1,113 @@
+:root{
+    --assent-color: rgb(11, 249, 205);
+    --body-color: #fff;
+    --primary-color: #000;
+    --secondary-color: #ddd;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* HTML PAGE FONT-SIZE RESTRUCTURE */
+html{
+/*<< 62.5% of 16px is = 10px (1rem = 10px) >>*/
+    font-size: 62.5%;
+}
+/* <<<<<<< ============== >>>>>>>> */
+
+/*<<< UTILITIES >>>*/
+.grid{
+    display: grid;
+}
+
+.flex{
+    display: flex;
+}
+
+/*<<< TYPOGRAPHIES >>>*/
+h1{
+    font-size: 4.2rem;
+}
+
+h2{
+    font-size: 3.1rem;
+}
+/*<<< ========== >>>*/
+/*<<< ========= >>>*/
+
+/*<<< MAIN CONTENT >>>*/
+#calculator{
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 1rem;
+    user-select: none;
+    width: 100%;
+}
+
+.container__calculator{
+    border-radius: 1rem;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.173);
+    height: 48rem;
+    width: 35rem;   
+}
+
+.calculator__screen{
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.163);
+    color: var(--assent-color);
+    height: 10rem;
+    margin: 1.5rem auto;
+    padding: .1rem 1rem;
+    text-align: right;
+    width: 33rem;
+}
+
+.calculator__numbers{
+    padding-top: 1.5rem;
+}
+
+.row__numbers h2{
+    border-radius: 100%;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.17);
+    cursor: pointer;
+    height: 6.3rem;
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+    text-align: center;
+    transition: .2s ease;
+    width: 6.3rem;
+}
+.row__numbers h2:hover,
+.row__numbers h2:active{
+    color: var(--assent-color);
+    background-color: rgba(221, 221, 221, 0.105);
+}
+
+#background__dark{
+    background-color: #000;
+    color: var(--body-color);
+}
+
+#background__dark:hover,
+#background__dark:active{
+    background-color: var(--assent-color);
+}
+
+@media screen and (max-width: 363px){
+.container__calculator{
+    width: 100%;
+}
+.calculator__screen{
+    width: 95%;
+}
+}
+/*<<<  >>>*/
